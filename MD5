@@ -1,0 +1,6 @@
+bfdeef2fca5610c0ab0714bb71f48bb4 *DESCRIPTION
+31d1eaad0e8131cb20811ee68840d2e8 *NAMESPACE
+72c134aa9b477e5f727cbbceef737517 *R/QMLE.R
+c2960a15525579fbfd23f23aaf3f00f4 *man/BayesianExgaussian.Rd
+a6e1ea1682e6c874ff0c8fce07db56a2 *man/QMLEEstim.Rd
+079de31ae2a028c63e150f6dfef8a1af *tests/testthat/test_QMLE.R
