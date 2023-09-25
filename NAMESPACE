@@ -2,7 +2,7 @@
 
 export(BayesianExgaussian)
 export(QMLEEstim)
-import(HI)
+import(dlm)
 import(fitdistrplus)
 import(invgamma)
 import(nloptr)

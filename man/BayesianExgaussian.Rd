@@ -29,9 +29,9 @@ BayesianExgaussian(n = 100, x = data)}
 
 }
 \references{
-Brown, S., & Heathcote, A. (2003). QMLE: Fast, robust, and efficient estimation of distribution functions based on quantiles. \emph{Behavior Research Methods, Instruments, & Computers}, \strong{35}, 485-492.
+Brown, S., & Heathcote, A. (2003). QMLE: Fast, robust, and efficient estimation of distribution functions based on quantiles. \emph{Behavior Research Methods, Instruments, & Computers}, \strong{35}, 485-492. 
 
-McCormack, P. D., & Wright, N. M. (1964). The positive skew observed in reaction time distributions. \emph{Canadian Journal of Psychology/Revue canadienne de psychologie}, \strong{18}, 43-51.
+McCormack, P. D., & Wright, N. M. (1964). The positive skew observed in reaction time distributions. \emph{Canadian Journal of Psychology/Revue canadienne de psychologie}, \strong{18}, 43-51. 
 
 Van Zandt, T. (2000). How to fit a response time distribution. \emph{Psychonomic Bulletin & Review}, \strong{7}, 424-465.
 

@@ -6,7 +6,8 @@
 ## Yousri.slaoui@math.univ-poitiers.fr
 ## caroline.bordes@univ-poitiers.fr
 ## cyril.perret@univ-poitiers.fr
-## The maintenance of the package is done by Yousri SLAOUI
+## jean.dumoncel@univ-poitiers.fr
+## The maintenance of the package is done by Jean Dumoncel
 #################################################
 
 ## We need the following packages:
@@ -16,7 +17,7 @@ require(stats)
 require(nloptr)
 require(fitdistrplus)
 require(invgamma)
-require(HI)
+require(dlm)
 require(gamlss.dist)
 
 
@@ -281,7 +282,7 @@ QMLEEstim<-function(y,func){
 
 
 #' Bayesian Ex-gaussian Estimate
-#' @import stats invgamma HI fitdistrplus
+#' @import stats invgamma dlm fitdistrplus
 #'
 #' @description Estimates the mu, sigma, and tau parameters of an ex-Gaussian distribution using a bayesian method.
 #' @param n the data size
@@ -328,15 +329,14 @@ BayesianExgaussian <-function(n,x,nSamples=5000,Ti=2500){
   #packages require
   # library(fitdistrplus)
   # library(invgamma)
-  # library(HI)
+  # library(dlm)
   # library(gamlss.dist)
 
   
   ## Initialization of hyper-parameters
-  y1 = (0.2)
-  y2 =(2.6)^2
-  delta1 =  0.0001
-  delta2 =0.1
+
+  delta1 = 1e-04
+  delta2 = 0.1
   tau1 = 0.1
   tau2 = 0.1
 
@@ -348,18 +348,21 @@ BayesianExgaussian <-function(n,x,nSamples=5000,Ti=2500){
 
   ## Initialization of the parameters
 
-  mu[1]= mean(x)-(sd(x)*0.8)
-  zeta[1]=(var(x)-(sd(x)*0.8)^2)
-  lambda[1]=1/(sd(x)*0.8)
+  mu[1] = mean(x) - (sd(x) * 0.5)
+  zeta[1] = (var(x) - (sd(x) * 0.5)^2)
+  lambda[1] = 1/(sd(x) * 0.5)
+
+  y1 = mean(mu) - (sd(mu) * 0.5)
+  y2 = var(mu) - (sd(mu) * 0.5)^2
 
   ## Lower and upper bounds
 
-  minnmu = min(x)
-  maxxmu = (max(x)/2)+1
-  minnzeta= 0.01
-  maxxzeta= ((max(x)-min(x))/4)^2
-  minnlambda= 0.001/mean(x)
-  maxxlambda= 100/((max(x)-min(x))/2)
+  minnmu = min(x)-1000
+  maxxmu = max(x) + 1000
+  minnzeta = 0.01
+  maxxzeta = ((max(x) - min(x))/4)^2
+  minnlambda = 0.001/mean(x)
+  maxxlambda = 100/((max(x) - min(x))/2)
 
   # The posterior functions
 
