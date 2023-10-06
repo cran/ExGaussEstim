@@ -1,13 +1,18 @@
 Package: ExGaussEstim
 Title: Quantile Maximization Likelihood Estimation and Bayesian
         Ex-Gaussian Estimation
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
   person(given = "Yousri",
            family = "SLAOUI",
            role = "aut",
            email = "Yousri.Slaoui@math.univ-poitiers.fr",
            comment = c(ORCID = "0000-0001-5295-3311")),
+  person(given = "Abir",
+           family = "EL HAJ",
+           role = c("aut", "ctb"),
+           email = "abir_hajj_1993@hotmail.com",
+           comment = c(ORCID = "0000-0003-3210-9097")),
   person(given = "Alandra",
            family = "ZAKKOUR",
            role = "aut",
@@ -34,14 +39,15 @@ RoxygenNote: 7.2.3
 Imports: pracma, stats, nloptr, invgamma, dlm, fitdistrplus,
         gamlss.dist
 NeedsCompilation: no
-Packaged: 2023-09-22 12:20:24 UTC; jean
+Packaged: 2023-10-06 06:57:48 UTC; jean
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Author: Yousri SLAOUI [aut] (<https://orcid.org/0000-0001-5295-3311>),
+  Abir EL HAJ [aut, ctb] (<https://orcid.org/0000-0003-3210-9097>),
   Alandra ZAKKOUR [aut],
   Caroline BORDES [aut, ctb],
   Cyril PERRET [aut] (<https://orcid.org/0000-0002-4552-9093>),
   Jean DUMONCEL [aut, cre] (<https://orcid.org/0000-0003-0789-7458>)
 Maintainer: Jean DUMONCEL <jean.dumoncel@univ-poitiers.fr>
 Repository: CRAN
-Date/Publication: 2023-09-25 10:40:08 UTC
+Date/Publication: 2023-10-06 07:20:02 UTC
